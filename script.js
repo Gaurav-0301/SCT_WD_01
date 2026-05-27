@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksArray = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
+    // Custom Alert Elements
+    const reservationForm = document.getElementById('reservationForm');
+    const customAlert = document.getElementById('custom-alert');
+    const alertMessage = document.getElementById('alert-message');
+    const closeAlertBtn = document.getElementById('close-alert-btn');
+
     // 1. Dynamic Appearance Change on Scrolling
     window.addEventListener('scroll', () => {
         if (window.scrollY > 30) {
@@ -50,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Client Interactivity - Intercept Reservation Form Submit
-    const reservationForm = document.getElementById('reservationForm');
     if (reservationForm) {
         reservationForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -61,9 +66,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const time = document.getElementById('time').value;
             const guests = document.getElementById('guests').value;
 
-            // Display interactive status toast
-            alert(`Hi, ${name}! Your booking request for ${guests} guest(s) on ${date} at ${time} has been registered successfully.`);
+            // Craft the message strings nicely
+            alertMessage.innerHTML = `<strong> Hi, ${name}!</strong><br>Your booking request for ${guests} guest(s) on ${date} at ${time} has been registered successfully.`;
+            
+            // Open the beautiful centered modal
+            customAlert.classList.add('show');
+            
+            // Reset the form inputs cleanly
             reservationForm.reset();
+
+            // Auto-hide the notification alert after 5 seconds automatically
+            setTimeout(() => {
+                customAlert.classList.remove('show');
+            }, 5000);
         });
     }
+
+    // Manual close button listener
+    if (closeAlertBtn) {
+        closeAlertBtn.addEventListener('click', () => {
+            customAlert.classList.remove('show');
+        });
+    }
+
+    // Close the modal if clicking outside the alert box container
+    window.addEventListener('click', (e) => {
+        if (e.target === customAlert) {
+            customAlert.classList.remove('show');
+        }
+    });
 });
