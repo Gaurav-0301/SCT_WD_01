@@ -1,38 +1,35 @@
-# Bella Vista — Authentic Italian Cuisine Landing Page
+# Responsive Landing Page — SCT_WD_1
 
-A beautiful, interactive, and 100% responsive landing page designed for a premium restaurant concept. This project features clean semantics, smooth scrolling, an adaptive mobile navigation drawer, and an interactive table reservation platform.
+A modern, highly interactive, and fully responsive restaurant landing page developed as part of my frontend curriculum tracking.
 
-🌐 **Live Deployment Link:** [https://sct-wd-01-six.vercel.app/](https://sct-wd-01-six.vercel.app/)
-
----
-
-## 📌 Internship Project Details
-* [cite_start]**Organization:** SkillCraft Technology [cite: 8]
-* [cite_start]**Role:** Web Development Intern [cite: 8]
-* **Task ID:** Task 01 — Responsive Landing Page
-* [cite_start]**Intern Name:** Gaurav Kakpure [cite: 6]
+🌐 **Live Production Deployment:** [https://sct-wd-01-six.vercel.app/](https://sct-wd-01-six.vercel.app/)
 
 ---
 
-## ✨ Features Implemented
-
-- **Fixed Interactive Navbar:** A modern, fixed-position navigation header that transitions seamlessly (adds shadows and adjusts height) when scrolling down the page.
-- **Dynamic Scroll Highlighting:** Navigation links update dynamically via JavaScript to reflect the active page section as the user scrolls.
-- **Fluid Responsiveness:** Built using CSS Grid and Flexbox to transition smoothly from large desktop displays down to mobile screens.
-- **Mobile Menu Drawer:** A hidden slide-out navigation menu for mobile viewports, triggered by an animated hamburger button.
-- **Interactive Reservation Form:** Contains validation layers for booking requests, coupled with an interactive user feedback event handler.
+## 📋 Internship Project Overview
+* **Organization:** SkillCraft Technology
+* **Track:** Web Development (WD)
+* **Task Identifier:** Task 01 — Responsive Landing Page
+* **Developer:** Gaurav Kakpure
 
 ---
 
-## 📂 Project Architecture
+## 🎯 Task Requirements Fulfilled
 
-```text
-bella-vista-restaurant/
-│
-├── index.html          # Semantic HTML5 layout structure
-├── style.css           # Modular typography, layout grids, and responsive viewports
-├── script.js           # Smooth scroll track mechanics and component listeners
-│
-└── assets/             # Project media directory
-    ├── background.png  # High-definition showcase hero background
-    └── about.jpg       # Story section media asset
+As per the official Task 01 specifications, this project successfully implements the following core structures:
+
+- **Fixed-Position Navigation:** Built a persistent header menu utilizing `position: fixed` that remains visible on all viewports during scroll actions.
+- **Dynamic Scroll Style Adaptations:** Implemented active scroll event listeners in JavaScript that dynamically apply visual alterations (custom transitions, shadows, and opacity depth shifts) when shifting down the viewport.
+- **Interactive Element Hover Triggers:** Applied modern CSS transitions and custom interactive highlighting pseudo-classes to navigation anchors, enhancing response feedback when users hover over menu options.
+- **Fluid Structural Responsiveness:** Structured modular multi-breakpoint CSS styles via Flexbox grids to transform the viewport layout from wide desktop layouts into an integrated mobile slide-out sidebar panel menu.
+
+---
+
+## 🛠️ Technical Implementation Stack
+
+- **Semantic Architecture:** HTML5
+- **Layout Construction:** CSS3 (Flexbox Layout, Global Document Variables, Keyframe Core Animations)
+- **Execution Scripting:** Vanilla JavaScript (ES6+ Layout Logic, Event Listeners)
+- **Deployment Pipelines:** Vercel Hosting Engine
+
+---
